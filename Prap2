@@ -8,9 +8,9 @@
 
     @Nullable
     @ColumnInfo(name = "PhrasesDescription")
-    private String mId;
+    private String mDescription;
 
-    private String mTitle;
+    private String mAuthor;
 
     public Museum(@Nullable String Description, String author, int score, String creationDate) {
         mDescription = description;
