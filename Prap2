@@ -1,5 +1,11 @@
- 
- Public class Phrases  {
+ import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "phrases")
+ public class Phrase  {
  
  @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -12,7 +18,8 @@
 
     private String mAuthor;
 
-    public Museum(@Nullable String Description, String author, int score, String creationDate) {
+//o nome do construtor da classe deve ser o mesmo do nome da classe 
+    public Phrase(@Nullable String description, String author, int score, String creationDate) {
         mDescription = description;
         mAuthor = author;
         mScore = score;
@@ -31,7 +38,7 @@
         return mDescription;
     }
 
-    public void setDescription(String Description) {
+    public void setDescription(String description) {
         mDescription = description;
     }
 
@@ -63,4 +70,4 @@
     private String mCreationDate;
 
 }
-}
+
